@@ -8,10 +8,7 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  more_info: 
 
 news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -23,6 +20,8 @@ Hello! I'm Enda Flynn, a Data Scientist at AIB, leading projects within the Grou
 My work at AIB has led to significant enhancements in data quality, automating 24 manual scenarios through a comprehensive Python program, while setting new standards in transaction verification and compliance monitoring in the process. My role extends to pioneering advancements in data processing and visualization, ensuring accuracy and actionable insights.
 
 In addition to my work, I engage deeply in personal projects - some of which you can find here on my GitHub.
+
+
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
