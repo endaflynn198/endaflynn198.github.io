@@ -39,22 +39,22 @@
       "location": "Dublin, Ireland",
       "url": "https://www.ucd.ie/",
       "area": "Data Analytics",
-      "studyType": "MSc",
+      "studyType": "MSc in Data Analytics",
       "startDate": "2021-09-01",
       "endDate": "Present",
       "score": "4.0 GPA",
-      "courses": ["Statistical Machine Learning", "Bayesian Analysis"]
+      "courses": ["4.0 GPA. Modules include Statistical Machine Learning, Bayesian Analysis, and Data Programming in Python / R / C++."]
     },
     {
       "institution": "Technological University Dublin",
       "location": "Dublin, Ireland",
       "url": "https://www.tudublin.ie/",
       "area": "Mathematical Sciences",
-      "studyType": "BSc (Honours)",
+      "studyType": "BSc (Honours) in Mathematical Sciences",
       "startDate": "2015-09-01",
       "endDate": "2020-07-01",
       "score": "First Class Honours",
-      "courses": ["Achieved the highest results at degree level (Overall Final Mark: 86.3%)."]
+      "courses": ["First Class Honours. Achieved the highest results at degree level (Overall Final Mark: 86.3%)."]
     }
   ],
   "awards": [
