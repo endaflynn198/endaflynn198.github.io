@@ -69,42 +69,23 @@
 
   "skills": [
     {
-      "name": "Physics",
+      "name": "Python",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Machine Learning",
+        "Data Analysis",
+        "Automation",
+        "Problem Solving"
       ]
     }
   ],
 
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "Boox Annotation Processing",
+      "summary": "Provides a solution for processing annotations from a Boox e-ink device. It converts the annotations into a formatted markdown output that can be easily imported into note-taking and personal knowledge base (PKB) applications like Obsidian. The repository remains frequently cloned.",
+      "url": "https://github.com/endaflynn198/boox-annotation-processing"
     }
   ]
 }
