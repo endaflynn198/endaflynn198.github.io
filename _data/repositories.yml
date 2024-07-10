@@ -5,8 +5,8 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
-  # - alshedivat/al-folio
-  # - jekyll/jekyll
+  - endaflynn198/boox-annotation-processing
+  - EndaFlynn1/Affine-Term-Structure-Models/forks
   # - twbs/bootstrap
   # - jquery/jquery
   # - FortAwesome/Font-Awesome
