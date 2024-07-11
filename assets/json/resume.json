@@ -101,6 +101,19 @@
         "Sub-queries",
         "Common Table Expressions"
       ]
+    },
+    {
+      "name": "Data Science",
+      "level": "Master",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "EDA and visualisation",
+        "Machine learning: feature engineering, model validation, hyperparameter tuning, supervised classification, unsupervised classification, etc.",
+        "Explainable AI",
+        "Statistical modelling: robust experience in hypothesis testing, regression modelling, predictive analytics, transformations, model diagnostics.",
+        "Multivariate Analysis: PCA, Factor Analysis, MDS, model based clustering",
+        "Bayesian Analysis: regression, model assessment, hierarchical modelling"
+      ]
     }
 
   ],
