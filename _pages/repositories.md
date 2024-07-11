@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /repositories/
-title: Repositories
+title: repositories
 description: Below I feature an old GitHub account (EndaFlynn1) and my current one (endaflynn198). My old account is mostly sequential scripts and my new account demonstrates the more sophisticated approaches to coding I have developed since I was a college student!
 nav: true
 nav_order: 4
