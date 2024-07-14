@@ -1,7 +1,7 @@
 ---
 layout: cv
 permalink: /cv_page/
-title: cv
+title: CV
 nav: true
 nav_order: 5
 cv_pdf: main.pdf
