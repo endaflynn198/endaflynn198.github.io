@@ -7,6 +7,32 @@ nav: true
 nav_order: 4
 ---
 
+## Projects
+
+### HDI Indicators R Package
+_[GitHub](https://github.com/endaflynn198/HDI_summary)_
+
+This library applies OOP principles to allow the easy summary and comparison of UN Human Development Indicators data from different countries. See related blog post [here](https://endaflynn198.github.io/blog/2024/HDI_indicators/). 
+
+And you can get a sense of the package by reading the vignette comparing Singapore and Nigeria [here](https://htmlpreview.github.io/?https://github.com/endaflynn198/HDI_summary/blob/main/vignettes/HDIsummary.html)
+
+
+
+
+### Boox Annotation Formatting tool
+_[GitHub](https://github.com/endaflynn198/boox-annotation-processing)_
+
+The Boox Annotation Processing repository provides a simple solution for processing Boox annotations. It allows you to convert the annotations into a formatted output that can be easily imported into note-taking and personal knowledge base (PKB) applications like [Obsidian](https://obsidian.md/).
+
+### Asynchronous Downloader
+_[GitHub](https://github.com/endaflynn198/asynchronous_downloader_tool)_
+
+This repository contains a simple asynchronous downloader that can be used to download all `.webm` and `.png` files from a website concurrently. This enables the rapid download of large numbers of files which can be useful for scraping image boards, open directories, and similar websites.
+
+
+
+
+
 ## GitHub users
 
 {% if site.data.repositories.github_users %}
