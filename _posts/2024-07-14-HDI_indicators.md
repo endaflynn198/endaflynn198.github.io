@@ -5,6 +5,7 @@ date: 2024-07-14 00:00:00
 description: A new R package for analysing UN Human Development Indicators
 tags: update
 categories: code r package
+featured: true
 ---
 
 # Learning to Build an R Package
