@@ -3,6 +3,12 @@ layout: post
 title: R Package for HDI Indicators
 date: 2024-07-14 00:00:00
 description: A new R package for analysing UN Human Development Indicators
+toc: 
+  sidebar: true 
+  toc_sticky: true 
+  # add toc levels
+  toc_float:
+    collapsed: false
 tags: update
 categories: code r package
 featured: true
