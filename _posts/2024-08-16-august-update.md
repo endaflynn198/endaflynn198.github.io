@@ -2,8 +2,8 @@
 layout: post
 title: Second Website Update
 date: 2024-08-16 00:00:00
-description: an update on the website progress
-tags: update
+description: An update on the website and GitHub progress
+tags: quarto r update
 categories: website-update 
 featured: true
 ---
