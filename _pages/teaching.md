@@ -2,7 +2,7 @@
 layout: page # distill
 permalink: /teaching/
 title: Tutoring
-description: Personalised tutoring and teaching in data science, programming, statistics, and mathematics.
+description: Personalised tutoring in data science, programming, statistics, and mathematics.
 
 toc: 
   sidebar: true # good for blogs
@@ -55,7 +55,7 @@ I see personalised tutoring as an alternative to self-study and formal education
 
 
 # My Background
-I have extensive experience in these areas and a history of exceptional academic achievement, achieving top grades even in the most challenging subjects such as statistical machine learning, Bayesian analysis, statistical network analysis, and multivariate analysis. 
+I have extensive experience in these areas and a history of exceptional academic achievement, achieving top grades in the most challenging subjects such as statistical machine learning, Bayesian analysis, statistical network analysis, and multivariate analysis. 
 
 In my work as a data scientist, I have designed and implemented machine learning models, conducted exploratory data analysis, and developed data visualisations. My work in detection scenario tuning in particular has been praised by external consultants as among the most sophisticated implementation they have seen among European banks.
 
@@ -99,6 +99,6 @@ I have tutored several family, friends, and colleagues in the past and, to my su
 Some of my previous students were individuals struggling with statistics and mathematics in their graduate courses, software engineers upskilling for data science projects, individuals looking to transition from operational roles into data science by learning to code, and even an experienced weather forecaster looking to apply Bayesian analysis to their work.
 
 # How to Get Started
-If you are interested in personalised tutoring, please feel free to contact me at my socials which you can find on my [about page](/about). I'm happy to provide a consultation to discuss your needs and answer any questions you may have. 
+If you are interested in personalised tutoring, please feel free to contact me at my socials which you can find on my [about page](/) (email is best). I'm happy to provide a consultation to discuss your needs and answer any questions you may have. 
 
 To allow me to better understand your needs, please provide me with a brief description of your background, your goals, and the topics you are interested in learning. I will then get back to you as soon as possible with a proposal for how we can work together to achieve your goals.
