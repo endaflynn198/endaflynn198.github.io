@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Data Scientist
+subtitle: Data Scientist - Based Between Ireland 🍀 and Belgium 🧇
 
 profile:
   align: right
@@ -17,7 +17,7 @@ social: true # includes social icons at the bottom of the page
 ---
 
 
-## About Me
+## About Me 
 Hello! I’m Enda Flynn, a Data Scientist at AIB, where I designed and now lead the Detection Scenario Tuning workstream within the Group Financial Crime Compliance division where my focus is on leveraging robust EDA, machine learning, and explainable AI to enhance transaction monitoring systems. Prior to leading this workstream, I played a central role in defining both the Data Quality and Detection Scenario Development workstreams.
 
 My work at AIB has led to significant enhancements in Data Quality by introducing monitoring tools to track transactions which fail to load into the NetReveal database and co-developing the process to remediate these. In Detection Scenario Development I have automated numerous manual SQL scenarios through a large, modular Python program which extended alert functionality and set new standards in alert verification, volume monitoring, and robust version control in the process. My role also extends to pioneering advancements in reporting and visualization, ensuring accuracy, actionable insights, and sustained increases in MI quality.

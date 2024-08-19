@@ -57,7 +57,7 @@ I see personalised tutoring as an alternative to self-study and formal education
 # My Background
 I have extensive experience in these areas and a history of exceptional academic achievement, achieving top grades in the most challenging subjects such as statistical machine learning, Bayesian analysis, statistical network analysis, and multivariate analysis. 
 
-In my work as a data scientist, I have designed and implemented machine learning models, conducted exploratory data analysis, and developed data visualisations. My work in detection scenario tuning in particular has been praised by external consultants as among the most sophisticated implementation they have seen among European banks.
+In my work as a data scientist, I have designed and implemented machine learning models, conducted exploratory data analysis, and developed data visualisations. My work in detection scenario tuning in particular has been praised by external consultants as among the most sophisticated implementations they have seen among European banks.
 
 If you are interested in learning more about my educational and professional background, please visit my [about page](/about), read my [CV](/cv_page), or check out my [LinkedIn](https://www.linkedin.com/in/enda-flynn-80a465174). 
 

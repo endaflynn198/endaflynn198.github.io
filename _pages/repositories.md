@@ -9,6 +9,9 @@ nav_order: 4
 
 ## Projects
 
+---
+
+
 ### HDI Indicators R Package
 _[GitHub](https://github.com/endaflynn198/HDI_summary)_
 
