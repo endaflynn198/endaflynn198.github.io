@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cycling Intelligence Snapshot</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <style>
+    :root { --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --bg:#f5f7fa; --surface:#ffffff; --blue:#2563eb; --teal:#0f766e; --orange:#d97706; --purple:#7c3aed; --red:#dc2626; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; background:var(--bg); color:var(--ink); }
+    header { padding:44px 6vw 24px; background:linear-gradient(135deg,#0f172a,#1e3a8a); color:white; }
+    header p { color:#cbd5e1; max-width:850px; line-height:1.55; }
+    main { padding:28px 6vw 60px; }
+    .grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+    .card, .chart, .note, .gate-panel { background:var(--surface); border:1px solid var(--line); border-radius:18px; box-shadow:0 18px 45px rgba(15,23,42,.06); }
+    .card { padding:18px; }
+    .label { color:var(--muted); font-size:13px; letter-spacing:.03em; text-transform:uppercase; }
+    .value { font-size:30px; font-weight:800; margin-top:6px; }
+    .delta { color:var(--muted); font-size:14px; margin-top:6px; }
+    .chart { padding:14px; margin-top:18px; }
+    .note { padding:18px 20px; margin:18px 0; color:#334155; line-height:1.55; }
+    .two { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    footer { padding:24px 6vw 40px; color:var(--muted); font-size:13px; }
+    #gate { position:fixed; inset:0; z-index:10; display:grid; place-items:center; padding:24px; background:linear-gradient(135deg,rgba(15,23,42,.96),rgba(30,58,138,.94)); }
+    .gate-panel { width:min(520px,100%); padding:28px; }
+    .gate-panel h2 { margin:0 0 8px; }
+    .gate-panel p { color:var(--muted); line-height:1.55; }
+    .password-row { display:flex; gap:10px; margin-top:18px; }
+    input { flex:1; border:1px solid var(--line); border-radius:12px; padding:12px 14px; font-size:16px; }
+    button { border:0; border-radius:12px; padding:12px 16px; background:var(--blue); color:white; font-weight:800; cursor:pointer; }
+    .error { color:var(--red); min-height:22px; margin-top:12px; }
+    .hidden { display:none !important; }
+    @media (max-width: 980px) { .grid, .two { grid-template-columns:1fr; } .password-row { flex-direction:column; } }
+  </style>
+</head>
+<body>
+  <div id="gate">
+    <form class="gate-panel" id="gate-form">
+      <h2>Private cycling dashboard</h2>
+      <p>This public GitHub Pages snapshot is encrypted. Enter the dashboard password to decrypt it in your browser.</p>
+      <div class="password-row">
+        <input id="password" type="password" inputmode="numeric" autocomplete="current-password" placeholder="Password" autofocus />
+        <button type="submit">Unlock</button>
+      </div>
+      <div class="error" id="gate-error"></div>
+    </form>
+  </div>
+  <header>
+    <h1>Cycling Intelligence Snapshot</h1>
+    <p>A static GitHub Pages-friendly export of the local dashboard. The summary payload is encrypted; no API key or raw stream data is embedded.</p>
+  </header>
+  <main>
+    <section class="grid" id="cards"></section>
+    <section class="note" id="summary-note">Unlock the dashboard to load the latest snapshot.</section>
+    <section class="two"><div class="chart" id="current-chart"></div><div class="chart" id="weekly-chart"></div></section>
+    <section class="two"><div class="chart" id="ftp-chart"></div><div class="chart" id="validation-chart"></div></section>
+    <section class="chart" id="endurance-chart"></section>
+  </main>
+  <footer id="footer"></footer>
+  <script>
+    const colors = {blue:'#2563eb', teal:'#0f766e', orange:'#d97706', purple:'#7c3aed', rose:'#ec4899', navy:'#0f172a', grid:'#e2e8f0'};
+    const layoutBase = {paper_bgcolor:'white', plot_bgcolor:'white', font:{family:'Inter, system-ui, sans-serif', color:'#0f172a'}, margin:{l:56,r:28,t:54,b:52}, legend:{orientation:'h', y:1.08}, xaxis:{gridcolor:colors.grid}, yaxis:{gridcolor:colors.grid}};
+    const fmt = (v, d=0) => Number.isFinite(+v) ? (+v).toFixed(d) : '-';
+    const card = (label, value, delta='') => `<article class="card"><div class="label">${label}</div><div class="value">${value}</div><div class="delta">${delta}</div></article>`;
+    const b64 = value => Uint8Array.from(atob(value), c => c.charCodeAt(0));
+    async function decryptPayload(password) {
+      const encrypted = await fetch('assets/dashboard-data.enc.json', {cache:'no-store'}).then(r => { if (!r.ok) throw new Error('Encrypted dashboard data is unavailable.'); return r.json(); });
+      const keyMaterial = await crypto.subtle.importKey('raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveKey']);
+      const key = await crypto.subtle.deriveKey({name:'PBKDF2', salt:b64(encrypted.salt), iterations:encrypted.kdf.iterations, hash:'SHA-256'}, keyMaterial, {name:'AES-CBC', length:256}, false, ['decrypt']);
+      const plain = await crypto.subtle.decrypt({name:'AES-CBC', iv:b64(encrypted.iv)}, key, b64(encrypted.ciphertext));
+      return JSON.parse(new TextDecoder().decode(plain));
+    }
+    function render(data) {
+      const s = data.snapshot || {};
+      const wkg = s.estimate_w && data.athlete_weight_kg ? s.estimate_w / data.athlete_weight_kg : null;
+      document.getElementById('cards').innerHTML = [card('Configured FTP', `${fmt(s.configured_ftp_w)} W`), card('Refined estimate', `${fmt(s.estimate_w,1)} W`, `${fmt(wkg,2)} W/kg`), card('Historical band', `${fmt(s.band_low_w)}-${fmt(s.band_high_w)} W`), card('Confidence', (s.confidence || 'Unavailable').replace(' - ', ' '))].join('');
+      const evidence = (data.current_evidence || []).map(x => `<strong>${x.evidence}:</strong> ${x.result}`).join(' | ');
+      document.getElementById('summary-note').innerHTML = evidence || 'No current evidence summary exported yet.';
+      document.getElementById('footer').textContent = `Generated ${new Date(data.generated_at).toLocaleString()} | weight ${fmt(data.athlete_weight_kg,1)} kg | encrypted static snapshot`;
+      const preds = data.current_predictions || [];
+      Plotly.newPlot('current-chart', [{x: preds.map(d=>d.date), y: preds.map(d=>d.current_estimate_w), mode:'lines+markers', name:'Estimate', line:{color:colors.blue,width:4}, error_y:{type:'data', symmetric:false, array:preds.map(d=>(d.historical_band_high_w||0)-(d.current_estimate_w||0)), arrayminus:preds.map(d=>(d.current_estimate_w||0)-(d.historical_band_low_w||0))}}], {...layoutBase, title:'Latest FTP-compatible estimates', yaxis:{title:'FTP estimate (W)', gridcolor:colors.grid}});
+      const weekly = data.weekly_activity || [];
+      const categories = [...new Set(weekly.map(d=>d.category))];
+      const categoryColors = {'Outdoor cycling':colors.teal,'Indoor cycling':colors.purple,'Strength':colors.orange,'Other aerobic':'#38bdf8','Other':'#94a3b8'};
+      Plotly.newPlot('weekly-chart', categories.map(c => ({x:weekly.filter(d=>d.category===c).map(d=>d.week), y:weekly.filter(d=>d.category===c).map(d=>d.hours), type:'bar', name:c, marker:{color:categoryColors[c] || '#94a3b8'}})), {...layoutBase, title:'Weekly total training time', barmode:'stack', yaxis:{title:'Hours', gridcolor:colors.grid}});
+      const ftp = data.ftp_progression || [];
+      Plotly.newPlot('ftp-chart', [{x:ftp.map(d=>d.start), y:ftp.map(d=>d.ftp_w), mode:'lines+markers+text', text:ftp.map(d=>fmt(d.ftp_w)), textposition:'top center', name:'FTP', line:{color:colors.blue,width:4}}], {...layoutBase, title:'FTP progression', yaxis:{title:'W', gridcolor:colors.grid}});
+      const val = (data.validation || []).slice().sort((a,b)=>(b.macro_epoch_mae_w||0)-(a.macro_epoch_mae_w||0));
+      Plotly.newPlot('validation-chart', [{x:val.map(d=>d.macro_epoch_mae_w), y:val.map(d=>d.model), type:'bar', orientation:'h', marker:{color:val.map(d=>d.model_role === 'Fair baseline' ? colors.navy : colors.teal)}}], {...layoutBase, title:'Model validation error', xaxis:{title:'Macro-period MAE (W)', gridcolor:colors.grid}, yaxis:{automargin:true}});
+      const endurance = data.endurance || [];
+      Plotly.newPlot('endurance-chart', [{x:endurance.map(d=>d.duration_label), y:endurance.map(d=>d.best_power_wkg), type:'bar', marker:{color:colors.teal}, text:endurance.map(d=>fmt(d.best_power_wkg,2)), textposition:'outside'}], {...layoutBase, title:'Long-duration records by relative power', yaxis:{title:'W/kg', gridcolor:colors.grid}});
+    }
+    document.getElementById('gate-form').addEventListener('submit', async event => {
+      event.preventDefault();
+      const error = document.getElementById('gate-error');
+      error.textContent = 'Decrypting...';
+      try { render(await decryptPayload(document.getElementById('password').value)); document.getElementById('gate').classList.add('hidden'); }
+      catch (err) { error.textContent = 'Could not unlock dashboard. Check the password and try again.'; }
+    });
+  </script>
+</body>
+</html>
