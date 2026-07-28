@@ -1,0 +1,314 @@
+/*******************************************************************************
+ * Portfolio-specific components
+ ******************************************************************************/
+
+.portfolio-intro {
+  max-width: 620px;
+  padding: 0.35rem 0 1.75rem;
+
+  .eyebrow {
+    color: var(--global-theme-color);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  .lede {
+    font-size: clamp(1.25rem, 2.7vw, 1.75rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.42;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.portfolio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0;
+
+  a {
+    align-items: center;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    display: inline-flex;
+    font-weight: 600;
+    justify-content: center;
+    padding: 0.72rem 1.15rem;
+    text-decoration: none;
+    transition:
+      background-color 160ms ease,
+      border-color 160ms ease,
+      color 160ms ease,
+      transform 160ms ease;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+
+    &.primary {
+      background: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+      color: var(--global-hover-text-color);
+    }
+
+    &.secondary {
+      background: var(--global-card-bg-color);
+      color: var(--global-text-color);
+    }
+  }
+}
+
+.portfolio-section {
+  margin: 3.25rem 0;
+
+  > h2 {
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    letter-spacing: -0.03em;
+    margin-bottom: 0.65rem;
+  }
+
+  > .section-intro {
+    color: var(--global-text-color-light);
+    line-height: 1.7;
+    margin-bottom: 1.4rem;
+    max-width: 720px;
+  }
+}
+
+.portfolio-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.portfolio-card {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+
+  .card-kicker {
+    color: var(--global-theme-color);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.55rem;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 1.12rem;
+    line-height: 1.35;
+    margin: 0 0 0.65rem;
+  }
+
+  p {
+    color: var(--global-text-color-light);
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  .card-link {
+    font-weight: 600;
+    margin-top: auto;
+    padding-top: 1rem;
+  }
+}
+
+.portfolio-callout {
+  background: linear-gradient(135deg, rgba(0, 118, 223, 0.12), rgba(38, 152, 186, 0.06));
+  border: 1px solid rgba(0, 118, 223, 0.22);
+  border-radius: 18px;
+  margin: 2rem 0;
+  padding: clamp(1.35rem, 4vw, 2.2rem);
+
+  h2,
+  h3 {
+    letter-spacing: -0.025em;
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.project-list {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.project-case {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 18px;
+  padding: clamp(1.35rem, 4vw, 2rem);
+
+  .project-topline {
+    align-items: flex-start;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+
+  h2 {
+    font-size: clamp(1.35rem, 3vw, 1.75rem);
+    letter-spacing: -0.025em;
+    margin: 0;
+  }
+
+  .project-number {
+    color: var(--global-theme-color);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .project-details {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    h3 {
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.45rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: var(--global-text-color-light);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.2rem 0 0;
+
+  span {
+    background: rgba(0, 118, 223, 0.1);
+    border-radius: 999px;
+    color: var(--global-theme-color);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.38rem 0.65rem;
+  }
+}
+
+.process-list {
+  counter-reset: process-step;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  margin: 1.4rem 0 0;
+  padding: 0;
+
+  li {
+    border-top: 2px solid var(--global-theme-color);
+    counter-increment: process-step;
+    padding: 1rem 0.25rem 0;
+
+    &::before {
+      color: var(--global-theme-color);
+      content: "0" counter(process-step);
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    span {
+      color: var(--global-text-color-light);
+      line-height: 1.55;
+    }
+  }
+}
+
+.contact-options {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 2rem 0;
+
+  a {
+    background: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 16px;
+    color: var(--global-text-color);
+    padding: 1.25rem;
+    text-decoration: none;
+    transition:
+      border-color 160ms ease,
+      transform 160ms ease;
+
+    &:hover {
+      border-color: var(--global-theme-color);
+      transform: translateY(-2px);
+    }
+
+    strong,
+    span {
+      display: block;
+    }
+
+    strong {
+      margin-bottom: 0.35rem;
+    }
+
+    span {
+      color: var(--global-text-color-light);
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+  }
+}
+
+a:focus-visible,
+button:focus-visible {
+  border-radius: 4px;
+  outline: 3px solid var(--global-theme-color);
+  outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .portfolio-grid,
+  .project-case .project-details,
+  .process-list,
+  .contact-options {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-section {
+    margin: 2.5rem 0;
+  }
+
+  .project-case .project-topline {
+    display: block;
+  }
+
+  .project-case .project-number {
+    display: block;
+    margin-bottom: 0.45rem;
+  }
+}
