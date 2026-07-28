@@ -2,93 +2,38 @@
 layout: about
 title: About
 permalink: /
-description: Enda Flynn is a data scientist specialising in applied machine learning, explainable AI, analytics, and automation.
-subtitle: Data scientist building explainable, reliable systems from complex data.
+subtitle: Data Scientist - Based Between Ireland 🍀 and Belgium 🧇
 
 profile:
   align: right
   image: prof_pic.jpg
   alt: Portrait of Enda Flynn
-  image_circular: false
+  image_circular: false # crops the image to make it circular
   more_info:
 
-news: false
-selected_papers: false
-social: false
+news: false # the old work-in-progress announcement has been retired
+selected_papers: false # includes a list of papers marked as "selected={true}"
+social: true # includes social icons at the bottom of the page
 ---
 
-<div class="portfolio-intro">
-  <p class="eyebrow">Data science · Machine learning · Automation</p>
-  <p class="lede">I turn difficult analytical problems into practical, well-engineered tools that people can understand and trust.</p>
-  <div class="portfolio-actions">
-    <a class="primary" href="/repositories/">Explore my projects</a>
-    <a class="secondary" href="/contact/">Get in touch</a>
-  </div>
-</div>
+---
 
-<section class="portfolio-section">
-  <h2>What I focus on</h2>
-  <p class="section-intro">My work sits at the intersection of statistical thinking, software development, and decisions that carry real operational consequences.</p>
+## About Me
 
-  <div class="portfolio-grid">
-    <article class="portfolio-card">
-      <div class="card-kicker">01 · Models</div>
-      <h3>Applied machine learning</h3>
-      <p>Building, validating, and explaining models with an emphasis on robust evaluation and useful decision support.</p>
-    </article>
-    <article class="portfolio-card">
-      <div class="card-kicker">02 · Evidence</div>
-      <h3>Analytics and data quality</h3>
-      <p>Finding the signal in complex data, making limitations visible, and turning analysis into clear, actionable insight.</p>
-    </article>
-    <article class="portfolio-card">
-      <div class="card-kicker">03 · Delivery</div>
-      <h3>Engineering and automation</h3>
-      <p>Replacing fragile manual processes with modular Python, R, and SQL tools that are easier to test, monitor, and maintain.</p>
-    </article>
-  </div>
-</section>
+Hello! I’m Enda Flynn, a Data Scientist at AIB, where I designed and now lead the Detection Scenario Tuning workstream within the Group Financial Crime Compliance division where my focus is on leveraging robust EDA, machine learning, and explainable AI to enhance transaction monitoring systems. Prior to leading this workstream, I played a central role in defining both the Data Quality and Detection Scenario Development workstreams.
 
-<section class="portfolio-section">
-  <h2>Experience in context</h2>
-  <p class="section-intro">At AIB, I designed and lead a detection-scenario tuning workstream within Group Financial Crime Compliance. The role combines exploratory analysis, machine learning, explainable AI, data-quality monitoring, and the careful communication needed to improve transaction-monitoring systems.</p>
-  <p class="section-intro">My earlier work helped define data-quality and scenario-development processes, including monitoring for transactions that failed to load and modular Python automation for previously manual SQL scenarios. Across that work, the common thread is dependable analysis that can stand up to review.</p>
-  <div class="portfolio-actions">
-    <a class="primary" href="/cv_page/">View my CV</a>
-    <a class="secondary" href="https://github.com/endaflynn198">Visit GitHub</a>
-  </div>
-</section>
+My work at AIB has led to significant enhancements in Data Quality by introducing monitoring tools to track transactions which fail to load into the NetReveal database and co-developing the process to remediate these. In Detection Scenario Development I have automated numerous manual SQL scenarios through a large, modular Python program which extended alert functionality and set new standards in alert verification, volume monitoring, and robust version control in the process. My role also extends to pioneering advancements in reporting and visualization, ensuring accuracy, actionable insights, and sustained increases in MI quality.
 
-<section class="portfolio-section">
-  <h2>Selected work</h2>
-  <p class="section-intro">A selection of open projects that show how I learn new technologies, structure analytical work, and build for other users.</p>
+Beyond my professional role, I am a developer of innovative solutions and tools as varied as a library for imputation experiments, an e-reader annotation converter, and web scrapers, as demonstrated in my array of personal projects hosted on my [GitHub](https://github.com/endaflynn198/). It is largely my personal study of new libraries and these projects which has enabled my innovations in my work.
 
-  <div class="portfolio-grid">
-    <article class="portfolio-card">
-      <div class="card-kicker">R · Data products</div>
-      <h3>Human Development Indicators toolkit</h3>
-      <p>An R package and interactive application for exploring and comparing UN development indicators.</p>
-      <a class="card-link" href="/repositories/#human-development-indicators-toolkit">View case study →</a>
-    </article>
-    <article class="portfolio-card">
-      <div class="card-kicker">Python · Automation</div>
-      <h3>Boox Annotation Processing</h3>
-      <p>A focused utility that converts e-reader annotations into clean Markdown for personal knowledge systems.</p>
-      <a class="card-link" href="/repositories/#boox-annotation-processing">View case study →</a>
-    </article>
-    <article class="portfolio-card">
-      <div class="card-kicker">R · Education</div>
-      <h3>R learning resources</h3>
-      <p>Reproducible, code-first reports covering statistics, modelling, clustering, and exploratory analysis.</p>
-      <a class="card-link" href="/repositories/#r-learning-resources">View case study →</a>
-    </article>
-  </div>
-</section>
+In addition to the above, I have a strong background in mathematics and statistics with a history of exceptional academic achievement.
 
-<aside class="portfolio-callout">
-  <h2>Personalised tutoring</h2>
-  <p>I also help learners and working professionals build confidence in data science, programming, statistics, and mathematics.</p>
-  <div class="portfolio-actions">
-    <a class="secondary" href="/teaching/">See tutoring options</a>
-  </div>
-</aside>
+I am currently in the process of building out my GitHub portfolio and this website to more fully showcase my work and abilities, so feel free to send me a request to connect on LinkedIn or contact me if you have any questions.
+
+---
+
+## Tutoring
+
+I also offer tutoring in data science, programming, statistics, and mathematics. If you are interested in learning more, please visit my [tutoring page](/teaching).
+
+---

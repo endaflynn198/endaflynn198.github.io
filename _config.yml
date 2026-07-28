@@ -11,7 +11,9 @@ description: >
   Portfolio of Enda Flynn, a data scientist specialising in applied machine learning,
   explainable AI, analytics, automation, and reliable data products.
 footer_text: >
-  Data science, machine learning, and practical software.
+  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 keywords: data science, machine learning, explainable AI, Python, R, SQL, analytics, automation
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -47,8 +49,8 @@ rss_icon: false
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: false
-search_enabled: false
+footer_fixed: true
+search_enabled: true
 socials_in_search: true
 
 # Dimensions
@@ -130,8 +132,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Writing # blog_name will be displayed in your blog page
-blog_description: Notes on data science, programming, and the projects I build.
+blog_name: My Blog # blog_name will be displayed in your blog page
+blog_description: Currently a work in progress...
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -196,7 +198,7 @@ announcements:
   limit: 3 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: false
+  enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 
