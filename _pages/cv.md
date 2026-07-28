@@ -3,9 +3,9 @@ layout: cv
 permalink: /cv_page/
 title: CV
 nav: true
-nav_order: 3
+nav_order: 4
 cv_pdf: main.pdf
-description: A concise overview of my professional experience, education, technical skills, and selected work.
+description: Below is an abbreviated version of my CV. For a more complete and informative version, I recommend checking my LinkedIn or the PDF of my CV at the top right of the page.
 toc:
   sidebar: left
 ---

@@ -1,8 +1,9 @@
 ---
 layout: default
 permalink: /blog/
-title: Writing
-nav: false
+title: Blog
+nav: true
+nav_order: 1
 pagination:
   enabled: true
   collection: posts

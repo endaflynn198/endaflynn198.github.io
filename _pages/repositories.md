@@ -1,139 +1,71 @@
 ---
 layout: page
 permalink: /repositories/
-title: Projects
-description: Selected data-science, automation, and educational projects by Enda Flynn.
+title: Repositories
+description: Below I feature an old GitHub account (EndaFlynn1) and my current one (endaflynn198). My old account is mostly sequential scripts and my new account demonstrates the more sophisticated approaches to coding I have developed since I was a college student!
 nav: true
-nav_order: 1
+nav_order: 2
 ---
 
-<div class="portfolio-callout">
-  <h2>Built to solve a clear problem</h2>
-  <p>These projects are deliberately varied, but they share the same approach: understand the user’s real need, make the analysis reproducible, and package the result so somebody else can use it.</p>
-  <div class="portfolio-actions">
-    <a class="primary" href="https://github.com/endaflynn198">Browse all GitHub repositories</a>
+## Projects
+
+---
+
+### HDI Indicators R Package
+
+_[GitHub](https://github.com/endaflynn198/HDI_summary)_
+
+This library applies OOP principles to allow the easy summary and comparison of UN Human Development Indicators data from different countries. See related blog post [here](https://endaflynn198.github.io/blog/2024/HDI_indicators/).
+
+And you can get a sense of the package by reading the vignette comparing Singapore and Nigeria [here](https://htmlpreview.github.io/?https://github.com/endaflynn198/HDI_summary/blob/main/vignettes/HDIsummary.html)
+
+### Boox Annotation Formatting tool
+
+_[GitHub](https://github.com/endaflynn198/boox-annotation-processing)_
+
+The Boox Annotation Processing repository provides a simple solution for processing Boox annotations. It allows you to convert the annotations into a formatted output that can be easily imported into note-taking and personal knowledge base (PKB) applications like [Obsidian](https://obsidian.md/).
+
+### Asynchronous Downloader
+
+_[GitHub](https://github.com/endaflynn198/asynchronous_downloader_tool)_
+
+This repository contains a simple asynchronous downloader that can be used to download all `.webm` and `.png` files from a website concurrently. This enables the rapid download of large numbers of files which can be useful for scraping image boards, open directories, and similar websites.
+
+## GitHub users
+
+{% if site.data.repositories.github_users %}
+
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+  {% for user in site.data.repositories.github_users %}
+    {% include repository/repo_user.liquid username=user %}
+  {% endfor %}
+</div>
+
+---
+
+{% if site.repo_trophies.enabled %}
+{% for user in site.data.repositories.github_users %}
+{% if site.data.repositories.github_users.size > 1 %}
+
+  <h4>{{ user }}</h4>
+  {% endif %}
+  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+  {% include repository/repo_trophies.liquid username=user %}
   </div>
+
+---
+
+{% endfor %}
+{% endif %}
+{% endif %}
+
+## GitHub Repositories
+
+{% if site.data.repositories.github_repos %}
+
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+  {% for repo in site.data.repositories.github_repos %}
+    {% include repository/repo.liquid repository=repo %}
+  {% endfor %}
 </div>
-
-<div class="project-list">
-  <article class="project-case" id="human-development-indicators-toolkit">
-    <div class="project-topline">
-      <div>
-        <span class="project-number">Project 01</span>
-        <h2>Human Development Indicators toolkit</h2>
-      </div>
-      <div class="portfolio-actions">
-        <a class="secondary" href="https://github.com/endaflynn198/HDI_summary">R package</a>
-        <a class="secondary" href="https://github.com/endaflynn198/hdi_shiny_app">Shiny app</a>
-      </div>
-    </div>
-    <div class="project-details">
-      <div>
-        <h3>Problem</h3>
-        <p>UN development data is broad and valuable, but comparing indicators between countries requires repeated filtering, summarising, and visualisation work.</p>
-      </div>
-      <div>
-        <h3>Approach</h3>
-        <p>I built an object-oriented R package for repeatable summaries and comparisons, then used it as the analytical layer for an interactive Shiny application.</p>
-      </div>
-      <div>
-        <h3>What it demonstrates</h3>
-        <p>Package design, documentation, reusable analysis, reactive applications, and translating a dataset into a coherent user workflow.</p>
-      </div>
-    </div>
-    <div class="skill-tags">
-      <span>R</span><span>OOP</span><span>Shiny</span><span>Documentation</span><span>Data visualisation</span>
-    </div>
-    <div class="portfolio-actions">
-      <a class="primary" href="/blog/2024/HDI_indicators/">Read the package article</a>
-      <a class="secondary" href="https://htmlpreview.github.io/?https://github.com/endaflynn198/HDI_summary/blob/main/vignettes/HDIsummary.html">Open the vignette</a>
-    </div>
-  </article>
-
-  <article class="project-case" id="asynchronous-downloader">
-    <div class="project-topline">
-      <div>
-        <span class="project-number">Project 04</span>
-        <h2>Asynchronous downloader</h2>
-      </div>
-      <div class="portfolio-actions">
-        <a class="secondary" href="https://github.com/endaflynn198/asynchronous_downloader_tool">View repository</a>
-      </div>
-    </div>
-    <div class="project-details">
-      <div>
-        <h3>Problem</h3>
-        <p>Downloading a large collection of media files sequentially wastes time and makes an otherwise simple collection task unnecessarily slow.</p>
-      </div>
-      <div>
-        <h3>Approach</h3>
-        <p>The utility discovers supported files and downloads them concurrently, turning a repetitive browser workflow into a reusable script.</p>
-      </div>
-      <div>
-        <h3>What it demonstrates</h3>
-        <p>Asynchronous Python, web requests, concurrency, and packaging a performance improvement into a straightforward tool.</p>
-      </div>
-    </div>
-    <div class="skill-tags">
-      <span>Python</span><span>Async IO</span><span>Web scraping</span><span>Performance</span>
-    </div>
-  </article>
-
-  <article class="project-case" id="boox-annotation-processing">
-    <div class="project-topline">
-      <div>
-        <span class="project-number">Project 02</span>
-        <h2>Boox Annotation Processing</h2>
-      </div>
-      <div class="portfolio-actions">
-        <a class="secondary" href="https://github.com/endaflynn198/boox-annotation-processing">View repository</a>
-      </div>
-    </div>
-    <div class="project-details">
-      <div>
-        <h3>Problem</h3>
-        <p>Annotations exported from a Boox e-reader are awkward to reuse in a personal knowledge base and require repetitive manual formatting.</p>
-      </div>
-      <div>
-        <h3>Approach</h3>
-        <p>The tool parses the exported content, applies consistent formatting, and produces clean Markdown ready for applications such as Obsidian.</p>
-      </div>
-      <div>
-        <h3>What it demonstrates</h3>
-        <p>Practical Python automation, text processing, command-line workflows, and designing a small tool around a concrete everyday need.</p>
-      </div>
-    </div>
-    <div class="skill-tags">
-      <span>Python</span><span>Text processing</span><span>Markdown</span><span>Automation</span>
-    </div>
-  </article>
-
-  <article class="project-case" id="r-learning-resources">
-    <div class="project-topline">
-      <div>
-        <span class="project-number">Project 03</span>
-        <h2>R learning resources</h2>
-      </div>
-      <div class="portfolio-actions">
-        <a class="secondary" href="https://github.com/endaflynn198/r-resources">View repository</a>
-      </div>
-    </div>
-    <div class="project-details">
-      <div>
-        <h3>Problem</h3>
-        <p>Technical examples often show isolated functions without explaining the analytical reasoning, diagnostics, and communication around them.</p>
-      </div>
-      <div>
-        <h3>Approach</h3>
-        <p>I created reproducible Quarto reports combining explanation, mathematics, source code, and output for topics including clustering and regression.</p>
-      </div>
-      <div>
-        <h3>What it demonstrates</h3>
-        <p>Statistical communication, literate programming, reproducibility, and an educational approach that connects theory with implementation.</p>
-      </div>
-    </div>
-    <div class="skill-tags">
-      <span>R</span><span>Quarto</span><span>Statistics</span><span>Teaching</span><span>Reproducibility</span>
-    </div>
-  </article>
-</div>
+{% endif %}
