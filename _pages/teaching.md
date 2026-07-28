@@ -12,7 +12,7 @@ nav_order: 2
   <p>Whether you are encountering statistics for the first time, moving into data science, or working through a difficult technical project, I can help you build understanding rather than simply memorise a solution.</p>
   <div class="portfolio-actions">
     <a class="primary" href="mailto:endaflynn173@gmail.com?subject=Tutoring%20enquiry">Ask about tutoring</a>
-    <a class="secondary" href="{{ '/cv_page/' | relative_url }}">Review my background</a>
+    <a class="secondary" href="/cv_page/">Review my background</a>
   </div>
 </div>
 

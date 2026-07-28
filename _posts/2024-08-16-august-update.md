@@ -4,11 +4,12 @@ title: Second Website Update
 date: 2024-08-16 00:00:00
 description: An update on the website and GitHub progress
 tags: quarto r update
-categories: website-update 
+categories: website-update
 featured: true
 ---
 
 ## Website Update
+
 Since my last update, I've made a great deal of progress on the website and GitHub despite it being a hectic period with several assignments due and work projects ramping up. Here's a brief overview of what I've done:
 
 - Added a new page for tutoring services
@@ -19,6 +20,7 @@ Since my last update, I've made a great deal of progress on the website and GitH
 I anticipate that I will have more time to work on the website in the coming weeks, so stay tuned for more updates and content.
 
 ## R Resources Repository
+
 I have created a [new repository](https://github.com/endaflynn198/r-resources) on GitHub to collect and share resources for R programming.
 
 At present, it consists of four sections:
@@ -31,7 +33,8 @@ At present, it consists of four sections:
 I'm particularly proud of the educational approach I've taken for each of these reports, and I think they will be a useful reference for anyone looking to learn more about these topics.
 
 ### Illustration and How to Use the Repository
-The root of the repository contains a README file that provides links to the repository housing each of the reports. 
+
+The root of the repository contains a README file that provides links to the repository housing each of the reports.
 <br>
 <br>
 
@@ -66,6 +69,6 @@ The below screenshot shows the aesthetics of Quarto reports, which I think are q
     </div>
 </div>
 
-As usual, if you have any questions or feedback, please feel free to reach out to me at any of my socials. 
+As usual, if you have any questions or feedback, please feel free to reach out to me at any of my socials.
 <br>
 <br>

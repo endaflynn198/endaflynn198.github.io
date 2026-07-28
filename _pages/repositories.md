@@ -45,7 +45,7 @@ nav_order: 1
       <span>R</span><span>OOP</span><span>Shiny</span><span>Documentation</span><span>Data visualisation</span>
     </div>
     <div class="portfolio-actions">
-      <a class="primary" href="{{ '/blog/2024/HDI_indicators/' | relative_url }}">Read the package article</a>
+      <a class="primary" href="/blog/2024/HDI_indicators/">Read the package article</a>
       <a class="secondary" href="https://htmlpreview.github.io/?https://github.com/endaflynn198/HDI_summary/blob/main/vignettes/HDIsummary.html">Open the vignette</a>
     </div>
   </article>

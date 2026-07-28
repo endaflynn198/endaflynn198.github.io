@@ -21,8 +21,8 @@ social: false
   <p class="eyebrow">Data science · Machine learning · Automation</p>
   <p class="lede">I turn difficult analytical problems into practical, well-engineered tools that people can understand and trust.</p>
   <div class="portfolio-actions">
-    <a class="primary" href="{{ '/repositories/' | relative_url }}">Explore my projects</a>
-    <a class="secondary" href="{{ '/contact/' | relative_url }}">Get in touch</a>
+    <a class="primary" href="/repositories/">Explore my projects</a>
+    <a class="secondary" href="/contact/">Get in touch</a>
   </div>
 </div>
 
@@ -54,7 +54,7 @@ social: false
   <p class="section-intro">At AIB, I designed and lead a detection-scenario tuning workstream within Group Financial Crime Compliance. The role combines exploratory analysis, machine learning, explainable AI, data-quality monitoring, and the careful communication needed to improve transaction-monitoring systems.</p>
   <p class="section-intro">My earlier work helped define data-quality and scenario-development processes, including monitoring for transactions that failed to load and modular Python automation for previously manual SQL scenarios. Across that work, the common thread is dependable analysis that can stand up to review.</p>
   <div class="portfolio-actions">
-    <a class="primary" href="{{ '/cv_page/' | relative_url }}">View my CV</a>
+    <a class="primary" href="/cv_page/">View my CV</a>
     <a class="secondary" href="https://github.com/endaflynn198">Visit GitHub</a>
   </div>
 </section>
@@ -68,19 +68,19 @@ social: false
       <div class="card-kicker">R · Data products</div>
       <h3>Human Development Indicators toolkit</h3>
       <p>An R package and interactive application for exploring and comparing UN development indicators.</p>
-      <a class="card-link" href="{{ '/repositories/' | relative_url }}#human-development-indicators-toolkit">View case study →</a>
+      <a class="card-link" href="/repositories/#human-development-indicators-toolkit">View case study →</a>
     </article>
     <article class="portfolio-card">
       <div class="card-kicker">Python · Automation</div>
       <h3>Boox Annotation Processing</h3>
       <p>A focused utility that converts e-reader annotations into clean Markdown for personal knowledge systems.</p>
-      <a class="card-link" href="{{ '/repositories/' | relative_url }}#boox-annotation-processing">View case study →</a>
+      <a class="card-link" href="/repositories/#boox-annotation-processing">View case study →</a>
     </article>
     <article class="portfolio-card">
       <div class="card-kicker">R · Education</div>
       <h3>R learning resources</h3>
       <p>Reproducible, code-first reports covering statistics, modelling, clustering, and exploratory analysis.</p>
-      <a class="card-link" href="{{ '/repositories/' | relative_url }}#r-learning-resources">View case study →</a>
+      <a class="card-link" href="/repositories/#r-learning-resources">View case study →</a>
     </article>
   </div>
 </section>
@@ -89,6 +89,6 @@ social: false
   <h2>Personalised tutoring</h2>
   <p>I also help learners and working professionals build confidence in data science, programming, statistics, and mathematics.</p>
   <div class="portfolio-actions">
-    <a class="secondary" href="{{ '/teaching/' | relative_url }}">See tutoring options</a>
+    <a class="secondary" href="/teaching/">See tutoring options</a>
   </div>
 </aside>
